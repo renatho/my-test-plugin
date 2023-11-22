@@ -26,5 +26,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function my_test_plugin_my_test_plugin_block_init() {
 	register_block_type( __DIR__ . '/build' );
+
+	register_block_pattern(
+		'my-test-plugin/test-pattern',
+		array(
+			'title'   => 'Test Pattern',
+			'content' => "<!-- wp:create-block/my-test-plugin /-->",
+		)
+	);
 }
 add_action( 'init', 'my_test_plugin_my_test_plugin_block_init' );

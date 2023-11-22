@@ -29,11 +29,10 @@ import "./editor.scss";
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit({ attributes: { content } }) {
 	return (
 		<div {...useBlockProps()}>
-			<h1>H1 Heading</h1>
-			<a href="#">Link</a>
+			<h1>{content}</h1>
 		</div>
 	);
 }

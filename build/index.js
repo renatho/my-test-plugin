@@ -51,12 +51,14 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @return {Element} Element to render.
  */
-function Edit() {
+function Edit({
+  attributes: {
+    content
+  }
+}) {
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, "H1 Heading"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#"
-  }, "Link"));
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, content));
 }
 
 /***/ }),
@@ -106,11 +108,12 @@ __webpack_require__.r(__webpack_exports__);
   /**
    * @see ./edit.js
    */
-  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"]
+
   /**
    * @see ./save.js
    */
-  save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
+  // save,
 });
 
 /***/ }),
@@ -227,7 +230,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/my-test-plugin","version":"0.1.0","title":"My Test Plugin","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"my-test-plugin","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/my-test-plugin","version":"0.1.0","title":"My Test Plugin","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","attributes":{"content":{"type":"string"}},"example":{"attributes":{"content":"Example"}},"supports":{"html":false},"textdomain":"my-test-plugin","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
